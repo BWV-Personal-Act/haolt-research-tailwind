@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+    <script>
+        if (localStorage.theme === 'dark' 
+            || (!('theme' in localStorage) 
+            && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HaoLT - Nền tảng học trực tuyến</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 dark:bg-gray-800">
+    <nav class="bg-white dark:bg-gray-800 shadow-lg fixed w-full top-0 z-50 transition-all duration-300 hover:shadow-xl">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-blue-600 dark:text-blue-400 transform transition hover:scale-110">HaoLT</h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-600 dark:text-gray-300 transition-colors duration-300 hover:text-blue-600 dark:hover:text-blue-400">Trang chủ</a>
+                    <a href="#" class="text-gray-600 dark:text-gray-300 transition-colors duration-300 hover:text-blue-600 dark:hover:text-blue-400">Khóa học</a>
+                    <a href="#" class="text-gray-600 dark:text-gray-300 transition-colors duration-300 hover:text-blue-600 dark:hover:text-blue-400">Về chúng tôi</a>
+                    <a href="#" class="text-gray-600 dark:text-gray-300 transition-colors duration-300 hover:text-blue-600 dark:hover:text-blue-400">Liên hệ</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-lg transform hover:-translate-y-1">
+                        Đăng ký ngay
+                    </a>
+                    <button id="theme-toggle" class="p-2 rounded-lg text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                        <svg class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                        <svg class="w-4 h-4 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-700 dark:to-blue-900 text-white py-32 mt-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="md:flex items-center justify-between">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 transform transition-all duration-700 hover:scale-105">
+                        Học trực tuyến cùng chuyên gia
+                    </h2>
+                    <p class="text-xl mb-8 transform transition-all duration-700 hover:translate-x-2">
+                        Tiếp cận hàng nghìn khóa học chất lượng cao từ các chuyên gia hàng đầu
+                    </p>
+                    <button class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-gray-100 hover:shadow-xl transform hover:-translate-y-1 active:scale-95">
+                        Bắt đầu học ngay
+                    </button>
+                </div>
+                <div class="md:w-1/2 transform transition-all duration-500 hover:scale-105">
+                    <img src="https://placehold.co/600x400" alt="Learning" class="rounded-lg shadow-xl transition-all duration-300 hover:shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <h3 class="text-3xl dark:text-white font-bold text-center mb-12 transform transition hover:scale-105">Tại sao chọn chúng tôi?</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer">
+                    <div class="text-blue-600 text-4xl mb-4 transform transition hover:scale-110">📚</div>
+                    <h4 class="text-xl font-semibold mb-2 dark:text-white">Khóa học đa dạng</h4>
+                    <p class="text-gray-600 dark:text-gray-300">Hơn 1000+ khóa học từ cơ bản đến nâng cao trong nhiều lĩnh vực</p>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer">
+                    <div class="text-blue-600 text-4xl mb-4 transform transition hover:scale-110">👨‍🏫</div>
+                    <h4 class="text-xl font-semibold mb-2 dark:text-white">Giảng viên chất lượng</h4>
+                    <p class="text-gray-600 dark:text-gray-300">Đội ngũ giảng viên có nhiều năm kinh nghiệm trong ngành</p>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer">
+                    <div class="text-blue-600 text-4xl mb-4 transform transition hover:scale-110">🎯</div>
+                    <h4 class="text-xl font-semibold mb-2 dark:text-white">Học theo lộ trình</h4>
+                    <p class="text-gray-600 dark:text-gray-300">Lộ trình học tập được thiết kế phù hợp với từng học viên</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-gray-100 dark:bg-gray-900 py-16">
+        <div class="max-w-6xl mx-auto px-4 text-center transform transition duration-500 hover:scale-105">
+            <h3 class="text-3xl font-bold mb-4 dark:text-white">Sẵn sàng để bắt đầu?</h3>
+            <p class="text-xl text-gray-600 mb-8 dark:text-gray-400">
+                Đăng ký ngay hôm nay để nhận ưu đãi đặc biệt
+            </p>
+            <div class="flex justify-center space-x-4">
+                <button class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-blue-700 hover:shadow-xl transform hover:-translate-y-1 active:scale-95">
+                    Đăng ký ngay
+                </button>
+                <button class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold border border-blue-600 transition-all duration-300 hover:bg-blue-50 hover:shadow-xl transform hover:-translate-y-1 active:scale-95">
+                    Tìm hiểu thêm
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="transform transition duration-500 hover:scale-105">
+                    <h5 class="text-xl font-bold mb-4">HaoLT</h5>
+                    <p class="text-gray-400">Nền tảng học trực tuyến hàng đầu Việt Nam</p>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold mb-4">Liên kết</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 transition-colors duration-300 hover:text-white">Trang chủ</a></li>
+                        <li><a href="#" class="text-gray-400 transition-colors duration-300 hover:text-white">Khóa học</a></li>
+                        <li><a href="#" class="text-gray-400 transition-colors duration-300 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 transition-colors duration-300 hover:text-white">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold mb-4">Khóa học</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 transition-colors duration-300 hover:text-white">Lập trình</a></li>
+                        <li><a href="#" class="text-gray-400 transition-colors duration-300 hover:text-white">Marketing</a></li>
+                        <li><a href="#" class="text-gray-400 transition-colors duration-300 hover:text-white">Thiết kế</a></li>
+                        <li><a href="#" class="text-gray-400 transition-colors duration-300 hover:text-white">Kinh doanh</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold mb-4">Liên hệ</h5>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400 transform transition hover:translate-x-2">Email: hao.lt@briswell-vn.com</li>
+                        <li class="text-gray-400 transform transition hover:translate-x-2">Phone: (84) 123 456 789</li>
+                        <li class="text-gray-400 transform transition hover:translate-x-2">Địa chỉ: Hồ Chí Minh, Việt Nam</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 dark:text-gray-500">
+                <p>&copy; 2025 HaoLT.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    themeToggleBtn.addEventListener('click', function() {
+        if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.theme = 'light';
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.theme = 'dark';
+        }
+    });
+</script>
+</html>
